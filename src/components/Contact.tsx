@@ -1,6 +1,6 @@
 import styles from '../styles/contact.module.scss';
 import Form from './Form';
-import Mapa from './Mapa';
+// import Mapa from './Mapa';
 
 export default function Contact() {
   return (
