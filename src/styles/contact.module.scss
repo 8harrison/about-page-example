@@ -1,5 +1,5 @@
 .contact-container {
-  @apply py-10 dark:bg-gray-700 flex flex-col lg:flex-row lg:justify-around;
+  @apply py-10 bg-gray-700 flex flex-col lg:flex-row lg:justify-around;
 
   > div:nth-child(1) {
     @apply flex flex-col  3xl:w-1/3;
