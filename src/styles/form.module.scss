@@ -1,0 +1,47 @@
+.form-container {
+    padding: calc(1rem + 1vw) ;
+    
+    align-self: center;
+  @apply bg-gray-800 w-fit ;
+
+  > div {
+    padding: calc(1rem + 0.5vw) ;
+    @apply  flex flex-col items-center border-2 sm:max-w-xs bg-white md:max-w-sm 3xl:max-w-lg; 
+    > h3 {
+        font-size: calc(0.5rem + 2vw);
+        @media (min-width: 1024px) {
+            font-size: calc(0.5rem + 1.5vw);
+        }
+        @media (min-width: 1920px) {
+            font-size: calc(0.5rem + 1vw);
+        }
+      @apply text-black font-bold text-center mb-4;
+    }
+    > label {
+        font-size: calc(0.5rem + 2vw);
+        @media (min-width: 1024px) {
+            font-size: calc(0.5rem + 1.5vw);
+        }
+        @media (min-width: 1920px) {
+            font-size: calc(0.5rem + 0.5vw);
+        }
+        @apply font-semibold w-full 3xl:px-12;
+      > input {
+        @apply border-2 border-black mb-4 w-full ;
+      }
+      > textarea {
+        @apply border-2 border-black w-full;
+      }
+    }
+    > button {
+        font-size: calc(0.5rem + 2vw);
+        @media (min-width: 1024px) {
+            font-size: calc(0.5rem + 1.5vw);
+        }
+        @media (min-width: 1920px) {
+            font-size: calc(0.5rem + 0.5vw);
+        }
+        @apply bg-gray-400 hover:bg-gray-500 mt-4 px-2 font-semibold;
+    }
+  }
+}

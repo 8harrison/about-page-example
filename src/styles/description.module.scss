@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+.description-container {
+  padding: calc(1rem + 8vw);
+  @media (min-width: 650px) {
+    // padding-right: calc(1rem + 25vw);;
+  }
+  @apply bg-white h-auto flex flex-col items-center shadow-lg;
+  > h2 {
+    font-size: calc(0.5rem + 2.5vw);
+    @apply font-bold mb-10;
+  }
+  > p {
+    font-size: calc(0.5rem + 2vw);
+    font-family: 'Roboto', sans-serif;
+    @apply font-semibold leading-relaxed text-justify break-words indent-6 ;
+  }
+}

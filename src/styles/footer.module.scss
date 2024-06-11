@@ -1,0 +1,11 @@
+.footer-container {
+  @apply bg-white shadow dark:bg-gray-800;
+  > div {
+    @apply w-full  p-4 flex items-center justify-center ;
+    > span {
+      font-size: calc(0.35rem + 0.5vw);
+      
+      @apply  text-gray-500 text-center dark:text-gray-400 ;
+    }
+  }
+}
