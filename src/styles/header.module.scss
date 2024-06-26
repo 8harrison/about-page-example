@@ -1,5 +1,5 @@
 .header-container {
-  @apply   bg-gray-800 border-gray-700 justify-between flex;
+  @apply   bg-gray-800 border-gray-700 justify-between flex xl:px-40;
   > div {
     @apply flex flex-wrap items-center justify-between mx-auto py-4 px-6 h-20
             w-full;

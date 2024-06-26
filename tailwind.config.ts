@@ -17,8 +17,13 @@ const config: Config = {
         '3xl': '1920px',
       },
     },
-   
+   fontFamily: {
+    'display': ['Oswald']
+   }
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/typography'),
+    require('daisyui'),
+  ],
 };
 export default config;
