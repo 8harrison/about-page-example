@@ -1,7 +1,12 @@
 import Image from "next/image";
- 
+
+const message = "Gostaria de marcar uma consulta para terapia individual."
+    .split(" ")
+    .join("%20");
+
+const whatsappLink = `https://wa.me/554888123179?text=${message}`;
+
 export default function Introduction() {
-    
     return (
         <div className="flex flex-col items-center shadow-sm md:flex-row bg-gradient-to-tr from-green-600 to-emerald-100 md:justify-around pt-16 h-full">
             <Image
@@ -33,7 +38,9 @@ export default function Introduction() {
                         type="button"
                         className="btn rounded-lg bg-green-700 text-white p-6 h-16 text-xl font-bold hover:bg-green-500 hover:border-green-600 border-green-500 active:bg-green-500  leading-none"
                     >
-                        AGENDAR CONSULTA
+                        <a href={whatsappLink} className="no-underline">
+                            AGENDAR CONSULTA
+                        </a>
                     </button>
                 </div>
             </div>

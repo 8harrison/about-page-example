@@ -1,5 +1,11 @@
 import Image from "next/image";
 
+const message = "Gostaria de marcar uma consulta para terapia individual."
+    .split(" ")
+    .join("%20");
+
+const whatsappLink = `https://wa.me/554888123179?text=${message}`;
+
 export default function TestContact() {
     return (
         <section className="py-6 bg-green-600 font-display" id="Contact">
@@ -40,16 +46,18 @@ export default function TestContact() {
                             />
                             <span>contact@business.com</span>
                         </p>
-                        <button className="btn self-center bg-green-300 active:bg-green-200 hover:bg-green-200 border-green-400 active:border-green-300 hover:border-green-300">
-                            <Image
-                                src="https://www.svgrepo.com/show/110197/whatsapp.svg"
-                                className="w-5 "
-                                width={50}
-                                height={50}
-                                alt="WhatsApp"
-                            />
-                            WhatsApp
-                        </button>
+                        <a href={whatsappLink} className="self-center">
+                            <button className="btn bg-green-300 active:bg-green-200 hover:bg-green-200 border-green-400 active:border-green-300 hover:border-green-300">
+                                <Image
+                                    src="https://www.svgrepo.com/show/110197/whatsapp.svg"
+                                    className="w-5 "
+                                    width={50}
+                                    height={50}
+                                    alt="WhatsApp"
+                                />
+                                WhatsApp
+                            </button>
+                        </a>
                     </div>
                 </div>
                 <form

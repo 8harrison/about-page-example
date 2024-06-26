@@ -13,6 +13,9 @@ interface PropsSection {
     href: string;
     current: boolean;
 }
+const message = 'Gostaria de marcar uma consulta para terapia individual.'.split(' ').join('%20')
+
+const whatsappLink = `https://wa.me/554888123179?text=${message}`;
 
 let navigation = [
     { name: "Home", href: "#", current: true },
@@ -103,7 +106,7 @@ export default function Example() {
                                     type="button"
                                     className="btn rounded-lg bg-green-300 hover:bg-green-500 hover:border-green-600 text-black text-sm font-bold border-green-500 active:bg-green-500 h-2 min-h-9 leading-none"
                                 >
-                                    AGENDAR CONSULTA
+                                    <a href={whatsappLink}>AGENDAR CONSULTA</a>
                                 </button>
                             </div>
                         </div>
