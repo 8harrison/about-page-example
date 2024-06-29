@@ -6,6 +6,8 @@ import Example from "./components/TestHeader";
 import Introduction from "@/app/second-example/components/TestIntroduction";
 import { NavMobileProvider } from "@/components/contexts";
 import Footer from "./components/Footer";
+import Form from "./components/Form";
+import ToastEmail from "./components/ToastEmail";
 
 export default function SecondExample(){
     return (
@@ -16,8 +18,9 @@ export default function SecondExample(){
                 <TestDescription />
                 <Services />
                 <TestAbout />
-                <TestContact />
+                <TestContact><Form/></TestContact>
                 <Footer />
+                <ToastEmail/>
             </div>
         </NavMobileProvider>
     );

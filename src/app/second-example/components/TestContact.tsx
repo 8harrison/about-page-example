@@ -1,4 +1,8 @@
+'use server'
 import Image from "next/image";
+import Form from "./Form";
+import { onSubmit } from "./utils";
+import React from "react";
 
 const message = "Gostaria de marcar uma consulta para terapia individual."
     .split(" ")
@@ -6,7 +10,8 @@ const message = "Gostaria de marcar uma consulta para terapia individual."
 
 const whatsappLink = `https://wa.me/554888123179?text=${message}`;
 
-export default function TestContact() {
+export default async function TestContact({children} : {children: React.ReactNode}) {
+
     return (
         <section className="py-6 bg-green-600 font-display" id="Contact">
             <div className="grid max-w-6xl grid-cols-1 px-6 mx-auto lg:px-8 md:grid-cols-2 md:divide-x">
@@ -60,40 +65,7 @@ export default function TestContact() {
                         </a>
                     </div>
                 </div>
-                <form
-                    noValidate={false}
-                    className="flex flex-col py-6 space-y-6 md:py-0 md:px-6"
-                >
-                    <label className="block">
-                        <span className="mb-1">Nome Completo</span>
-                        <input
-                            type="text"
-                            placeholder="Leroy Jenkins"
-                            className="block w-full rounded-md shadow-sm focus:ring bg-gray-100"
-                        />
-                    </label>
-                    <label className="block">
-                        <span className="mb-1">Email</span>
-                        <input
-                            type="email"
-                            placeholder="leroy@jenkins.com"
-                            className="block w-full rounded-md shadow-sm focus:ring bg-gray-100"
-                        />
-                    </label>
-                    <label className="block">
-                        <span className="mb-1">Mensagem</span>
-                        <textarea
-                            rows={3}
-                            className="block w-full rounded-md focus:ring bg-gray-100"
-                        ></textarea>
-                    </label>
-                    <button
-                        type="button"
-                        className=" btn text-lg bg-green-300 active:bg-green-200 hover:bg-green-200 self-center border-green-400 active:border-green-300 hover:border-green-300"
-                    >
-                        Enviar
-                    </button>
-                </form>
+                {children}
             </div>
         </section>
     );

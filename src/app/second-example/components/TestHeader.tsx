@@ -13,7 +13,9 @@ interface PropsSection {
     href: string;
     current: boolean;
 }
-const message = 'Gostaria de marcar uma consulta para terapia individual.'.split(' ').join('%20')
+const message = "Gostaria de marcar uma consulta para terapia individual."
+    .split(" ")
+    .join("%20");
 
 const whatsappLink = `https://wa.me/554888123179?text=${message}`;
 
@@ -38,7 +40,6 @@ export default function Example() {
             return it;
         });
         setSections(navigation);
-        console.log(navigation);
     }
     return (
         <Disclosure as="nav" className="bg-green-800 fixed w-full z-10">
