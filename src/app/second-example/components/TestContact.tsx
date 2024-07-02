@@ -1,17 +1,12 @@
-'use server'
 import Image from "next/image";
-import Form from "./Form";
-import { onSubmit } from "./utils";
+import { whatsappLink } from "./utils";
 import React from "react";
 
-const message = "Gostaria de marcar uma consulta para terapia individual."
-    .split(" ")
-    .join("%20");
-
-const whatsappLink = `https://wa.me/554888123179?text=${message}`;
-
-export default async function TestContact({children} : {children: React.ReactNode}) {
-
+export default async function TestContact({
+    children,
+}: {
+    children: React.ReactNode;
+}) {
     return (
         <section className="py-6 bg-green-600 font-display" id="Contact">
             <div className="grid max-w-6xl grid-cols-1 px-6 mx-auto lg:px-8 md:grid-cols-2 md:divide-x">

@@ -65,13 +65,13 @@ export default function Services() {
     ];
     return (
         <div
-            className="font-display bg-green-200 flex flex-col items-center"
+            className="font-display bg-green-200 flex flex-col items-center pl-8"
             id="Services"
         >
             <h2 className="text-3xl font-bold text-center mt-8 mb-8">
                 Serviços Oferecidos
             </h2>
-            <ul className="flex  items-center  carousel w-full">
+            <ul className="flex items-center carousel w-full">
                 {services.map((ser: ServicesAvailable) => (
                     <Card
                         key={ser.service}
@@ -88,19 +88,21 @@ export default function Services() {
 function Card({ image, service, descricao }: ServicesAvailable) {
     return (
         <>
-            <div className="card w-80 shadow-xl my-10 flex sm:flex-row sm:w-11/12 bg-green-300 sm:max-w-2xl lg:flex-col lg:w-80 carousel-item mx-8">
-                <figure className="aspect-square sm:aspect-auto sm:h-full sm:w-52 lg:aspect-square lg:w-full">
+            <div className="card h-[500px] w-80 shadow-xl my-10 flex-row items-center sm:w-11/12 bg-green-300 sm:max-w-2xl md:max-w-3xl sm:h-96 carousel-item mx-8 sm:pb-10">
+                <figure className="aspect-auto sm:aspect-square sm:w-52 lg:aspect-square md:w-80 rounded-xl self-stretch ">
                     <Image
                         src={image}
                         alt={service}
-                        className="rounded-xl"
+                        className="rounded-xl opacity-75 hidden sm:flex"
                         width={800}
                         height={800}
                     />
                 </figure>
-                <div className="card-body sm:w-2/4 lg:w-full h-80">
-                    <h2 className="card-title">{service}</h2>
-                    <p className="tracking-widest text-xs">{descricao}</p>
+                <div className="card-body sm:w-2/4 prose">
+                    <h3 className="card-title">{service}</h3>
+                    <p className="tracking-widest text-base text-left text-black font-display break-all indent-4">
+                        {descricao}
+                    </p>
                 </div>
             </div>
         </>

@@ -7,20 +7,18 @@ import {
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import { useState } from "react";
+import { whatsappLink } from "./utils";
 
 interface PropsSection {
     name: string;
     href: string;
     current: boolean;
 }
-const message = "Gostaria de marcar uma consulta para terapia individual."
-    .split(" ")
-    .join("%20");
 
-const whatsappLink = `https://wa.me/554888123179?text=${message}`;
 
 let navigation = [
     { name: "Home", href: "#", current: true },
+    { name: "Abordagem", href: "#Abordagem", current: false },
     { name: "Serviços", href: "#Services", current: false },
     { name: "Sobre mim", href: "#About", current: false },
     { name: "Contato", href: "#Contact", current: false },
@@ -46,28 +44,28 @@ export default function Example() {
             {({ open }: any) => (
                 <>
                     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                        <div className="relative flex h-16 items-center justify-between w-full md:justify-around">
+                        <div className="relative flex h-24 items-center justify-between w-full md:justify-around">
                             <div className=" inset-y-0 left-0 flex items-center sm:hidden">
                                 {/* Mobile menu button*/}
                                 <DisclosureButton className="relative inline-flex items-center justify-center rounded-md p-2 hover:bg-green-700 text-white focus:outline-none">
                                     {open ? (
                                         <XMarkIcon
-                                            className="block h-6 w-6"
+                                            className="block w-10"
                                             aria-hidden="true"
                                         />
                                     ) : (
                                         <Bars3Icon
-                                            className="block h-6 w-6"
+                                            className="block w-10"
                                             aria-hidden="true"
                                         />
                                     )}
                                 </DisclosureButton>
                             </div>
-                            <div className="flex items-center  sm:items-stretch sm:justify-around mr-2 sm:w-full md:w-auto">
+                            <div className="flex items-center sm:justify-around mr-2 sm:w-full md:w-auto">
                                 <div className="flex flex-shrink-0 items-center">
                                     <Image
-                                        className="h-8 w-auto"
-                                        src="/android-chrome-384x384.png"
+                                        className="h-14 w-auto"
+                                        src="/favicon_package_v0.16/new_logo_genesio-removebg-preview.png"
                                         alt="Logo Genésio"
                                         width={50}
                                         height={50}
@@ -87,7 +85,7 @@ export default function Example() {
                                                 className={classNames(
                                                     item.current
                                                         ? "bg-green-900 text-white"
-                                                        : "text-gray-300 hover:bg-green-700 hover:text-white",
+                                                        : "text-gray-300 hover:bg-green-700 hover:text-white focus:bg-green-900 active:bg-green-900",
                                                     "rounded-md px-3 py-2 text-base font-medium"
                                                 )}
                                                 aria-current={
@@ -102,7 +100,7 @@ export default function Example() {
                                     </div>
                                 </div>
                             </div>
-                            <div className="absolute inset-y-0 right-0 hidden md:flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+                            <div className="absolute inset-y-0 right-0 hidden lg:flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
                                 <button
                                     type="button"
                                     className="btn rounded-lg bg-green-300 hover:bg-green-500 hover:border-green-600 text-black text-sm font-bold border-green-500 active:bg-green-500 h-2 min-h-9 leading-none"

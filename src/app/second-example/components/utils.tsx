@@ -26,7 +26,7 @@ export async function onSubmit(email: EmailMessage) {
             .setSubject(`Mensagem de ${email.fullName}`)
             .setTemplateId("zr6ke4n5d594on12")
             .setPersonalization(formatBodyEmail(email));
-        // await mailerSend.email.send(emailParams);
+        await mailerSend.email.send(emailParams);
     } catch (e) {
         console.log(e);
     }
@@ -88,3 +88,9 @@ export const formStatus: FormStatus = {
     REQ_NAME: { isVisible: true, message: "Nome muito curto!" },
     REQ_MESSAGE: { isVisible: true, message: "Mensagem muito curta!" },
 };
+
+const message = "Gostaria de marcar uma consulta para terapia individual."
+    .split(" ")
+    .join("%20");
+
+export const whatsappLink = `https://wa.me/554888123179?text=${message}`;
