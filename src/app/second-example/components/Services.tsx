@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Container from "./Container";
 
 interface ServicesAvailable {
     service: string;
@@ -64,7 +65,7 @@ export default function Services() {
         },
     ];
     return (
-        <div
+        <Container
             className="font-display bg-green-200 flex flex-col items-center pl-8"
             id="Services"
         >
@@ -81,7 +82,7 @@ export default function Services() {
                     />
                 ))}
             </ul>
-        </div>
+        </Container>
     );
 }
 

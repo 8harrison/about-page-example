@@ -9,7 +9,9 @@ import Footer from "./components/Footer";
 import Form from "./components/Form";
 import ToastEmail from "./components/ToastEmail";
 
-export default function SecondExample(){
+
+
+export default function SecondExample() {
     return (
         <NavMobileProvider>
             <div>
@@ -18,9 +20,11 @@ export default function SecondExample(){
                 <TestDescription />
                 <Services />
                 <TestAbout />
-                <TestContact><Form/></TestContact>
+                <TestContact>
+                    <Form />
+                </TestContact>
                 <Footer />
-                <ToastEmail/>
+                <ToastEmail />
             </div>
         </NavMobileProvider>
     );

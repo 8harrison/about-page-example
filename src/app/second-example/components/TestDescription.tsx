@@ -1,8 +1,9 @@
 import Image from "next/image";
+import Container from "./Container";
 
 export default function TestDescription() {
     return (
-        <div className="bg-gradient-to-b from-green-600 to-emerald-100" id="Abordagem">
+        <Container className="bg-gradient-to-b from-green-600 to-emerald-100" id="Method">
             <div className="flex flex-col overflow-hidden shadow-sm md:flex-row md:justify-around font-display md:pt-20">
                 <div className="flex flex-col justify-center flex-1 p-6 prose font-display md:py-20">
                     <h2 className="font-bold">Abordagem Terapêutica</h2>
@@ -19,7 +20,7 @@ export default function TestDescription() {
                 <Image
                     src="/ilustracoes/cerebro.png"
                     alt=""
-                    className="h-auto md:w-1/3  w-1/2 self-center m-2 max-w-96 opacity-50"
+                    className="h-auto md:w-1/3  w-1/2 self-center m-2 max-w-40 opacity-50"
                     width={800}
                     height={800}
                 />
@@ -28,7 +29,7 @@ export default function TestDescription() {
                 <Image
                     src="/ilustracoes/cabeca.png"
                     alt=""
-                    className="h-auto md:w-1/3 w-1/2 self-center m-2 max-w-96 opacity-50"
+                    className="h-auto md:w-1/3 w-1/2 self-center m-2 max-w-40 opacity-50"
                     width={800}
                     height={800}
                 />
@@ -57,6 +58,6 @@ export default function TestDescription() {
                     </div>
                 </article>
             </div>
-        </div>
+        </Container>
     );
 }

@@ -1,11 +1,20 @@
 import Image from "next/image";
+import { useRef, useEffect } from "react";
+import Container from "./Container";
 
 export default function TestAbout() {
     return (
-        <div
-            className="flex flex-col overflow-hidden items-center shadow-sm md:flex-row bg-green-300 md:justify-around"
+        <Container
+            className="flex flex-col overflow-hidden items-center shadow-sm md:flex-row bg-green-300 md:justify-around md:pb-10"
             id="About"
         >
+            <Image
+                src="/genesio_sofa.png"
+                alt=""
+                className="h-auto md:w-1/3  w-2/3 self-center m-2 max-w-96"
+                width={800}
+                height={800}
+            />
             <div className="flex flex-col justify-center flex-1 p-6 prose font-display">
                 <h3 className="text-3xl font-bold text-center">Sobre Mim</h3>
 
@@ -27,13 +36,6 @@ export default function TestAbout() {
                     aberta e honesta.
                 </p>
             </div>
-            <Image
-                src="/genesio_serio.png"
-                alt=""
-                className="h-auto md:w-1/3  w-2/3 self-center m-2 max-w-96"
-                width={800}
-                height={800}
-            />
-        </div>
+        </Container>
     );
 }
